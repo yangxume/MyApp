@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et"
+        style="@style/style_common_et" />
+
+    <Button
+        android:id="@+id/btn_share_text"
+        style="@style/style_common_btn"
+        android:text="@string/share_text" />
+
+    <Button
+        android:id="@+id/btn_share_binary"
+        style="@style/style_common_btn"
+        android:text="@string/share_binary" />
+    <Button
+        android:id="@+id/btn_share_multi_pieces_content"
+        style="@style/style_common_btn"
+        android:text="@string/share_multiple_pieces_of_content" />
+
+</LinearLayout>

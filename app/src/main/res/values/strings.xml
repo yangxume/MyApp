@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">android-myapp</string>
+
+    <!--1.android 分享操作-->
+    <string name="str_01_share">android share</string>
+    <string name="share">分享</string>
+    <string name="send_to">发送</string>
+    <string name="share_text">分享文本内容</string>
+    <string name="share_binary">分享二进制内容</string>
+    <string name="share_multiple_pieces_of_content">发送多块内容</string>
+
+
+    <string name="str_02_Multimedia">Multimedia</string>
+    <string name="audio_player">音频播放</string>
+</resources>

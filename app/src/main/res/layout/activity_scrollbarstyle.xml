@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="50dp"
+    android:scrollbarStyle="outsideInset"
+    android:orientation="vertical">
+
+    <!--insideOverlay：默认值，表示在padding区域内并且覆盖在view上-->
+    <!--insideInset：表示在padding区域内并且插入在view后面-->
+    <!--outsideOverlay：表示在padding区域外并且覆盖在view上，推荐这个-->
+    <!--outsideInset：表示在padding区域外并且插入在view后面-->
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:background="@android:color/holo_orange_dark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"/>
+
+</ScrollView>

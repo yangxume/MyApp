@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="okay.myapp.MainActivity">
+
+    <Button
+        android:id="@+id/btn_share_data"
+        style="@style/style_common_btn"
+        android:text="@string/str_01_share" />
+
+    <Button
+        android:id="@+id/btn_send_binary_content"
+        style="@style/style_common_btn"
+        android:text="btn2" />
+
+    <Button
+        android:id="@+id/btn_scrollbarstyle"
+        style="@style/style_common_btn"
+        android:text="3scrollbarstyle" />
+</LinearLayout>
