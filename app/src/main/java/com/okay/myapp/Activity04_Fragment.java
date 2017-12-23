@@ -24,5 +24,7 @@ public class Activity04_Fragment extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity04_fragment);
+
+
     }
 }

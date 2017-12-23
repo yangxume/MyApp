@@ -23,7 +23,7 @@ import com.okay.myapp.R;
  * Update records:
  */
 
-public class ArticleFragment
+public class Fragment04_Headlines
         extends Fragment {
 
     @Override

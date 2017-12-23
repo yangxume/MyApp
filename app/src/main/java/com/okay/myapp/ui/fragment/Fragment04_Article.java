@@ -23,7 +23,7 @@ import com.okay.myapp.R;
  * Update records:
  */
 
-public class HeadlinesFragment
+public class Fragment04_Article
         extends Fragment {
 
     @Override
@@ -34,6 +34,6 @@ public class HeadlinesFragment
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment04_headlines,container,false);
+        return inflater.inflate(R.layout.fragment04_article,container,false);
     }
 }

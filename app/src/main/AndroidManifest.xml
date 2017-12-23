@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity android:name=".Activity01_ShareData"/>
+        <activity android:name=".Activity02_Multimedia"/>
+        <activity android:name=".Activity03_ScrollBarStyle"/>
+        <activity android:name=".Activity04_Fragment"/>
     </application>
 
 </manifest>
