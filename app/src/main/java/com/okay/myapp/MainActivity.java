@@ -37,14 +37,19 @@ public class MainActivity extends BaseActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
 
-        toolbar.setLogo(R.mipmap.ic_launcher);
+        // App Logo
+        toolbar.setLogo(R.drawable.ic_launcher);
+        // Title
         toolbar.setTitle("My Title");
-        toolbar.setSubtitle("Sub Title");
+        // Sub Title
+        toolbar.setSubtitle("Sub title");
 
         setSupportActionBar(toolbar);
 
-        toolbar.setNavigationIcon(R.mipmap.icon_navigation);
-
+        // Navigation Icon 要設定在 setSupoortActionBar 才有作用
+        // 否則會出現 back bottom
+        toolbar.setNavigationIcon(R.drawable.ab_android);
+        // Menu item click 的監聽事件一樣要設定在 setSupportActionBar 才有作用
         toolbar.setOnMenuItemClickListener(onMenuItemClick);
     }
 
@@ -72,7 +77,8 @@ public class MainActivity extends BaseActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        return super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu_main,menu);
+        return true;
     }
 
     private Toolbar.OnMenuItemClickListener onMenuItemClick = new Toolbar.OnMenuItemClickListener() {

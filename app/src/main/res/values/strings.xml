@@ -12,4 +12,10 @@
 
     <string name="str_02_Multimedia">Multimedia</string>
     <string name="audio_player">音频播放</string>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
+    <string name="action_edit">Edit</string>
 </resources>
