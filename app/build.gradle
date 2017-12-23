@@ -30,4 +30,19 @@ dependencies {
 
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //    兼容一些 Framework API，如 Context.getDrawable() 和View.performAccessibilityAction()，大小为 602k
+    implementation 'com.android.support:support-compat:24.2.1'
+    //    提供一系列核心的工具类，如 AsyncTaskLoader 和 PermissionChecker，大小为 90k
+    implementation 'com.android.support:support-core-utils:24.2.1'
+    //    提供一系列核心的 UI，如 ViewPager、 NestedScrollView，大小为 240k
+    implementation 'com.android.support:support-core-ui:24.2.1'
+    //    android.media 兼容库，包括 MediaBrowser 和 MediaSession，大小为 248k
+    implementation 'com.android.support:support-media-compat:24.2.1'
+    //    跟fragment相关部分，大小为 136k。
+    // V4这个子库依赖了其他4个子库，所以我们一旦依赖这个库就会自动导入其他4个子库，这跟直接依赖整个support-v4效果类似
+    implementation 'com.android.support:support-fragment:24.2.1'
+    //    support-annotations 为一些注解的声明库，如我们比较常用的 RequiresApi、UiThread、NonNull。大小为 21k
+    implementation 'com.android.support:support-annotations:26.0.0-beta1'
+    implementation 'com.android.support:support-v4:26.0.0-beta1'
 }
