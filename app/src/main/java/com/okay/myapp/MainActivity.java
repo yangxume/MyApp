@@ -1,5 +1,6 @@
 package com.okay.myapp;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -14,7 +15,8 @@ import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
 
-
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
     @BindView(R.id.btn01_share_data)
     Button btn01ShareData;
     @BindView(R.id.btn02_send_binary_content)
@@ -23,6 +25,11 @@ public class MainActivity extends BaseActivity {
     Button btn03Scrollbarstyle;
     @BindView(R.id.btn04_fragment)
     Button btn04Fragment;
+    @BindView(R.id.btn05_statusbar_style)
+    Button btn05StatusbarStyle;
+    @BindView(R.id.btn06_open_source_library)
+    Button btn06OpenSourceLibrary;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +42,11 @@ public class MainActivity extends BaseActivity {
 
     private void initView() {
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-
         // App Logo
         toolbar.setLogo(R.drawable.ic_launcher);
         // Title
         toolbar.setTitle("My Title");
+        toolbar.setTitleTextColor(Color.RED);
         // Sub Title
         toolbar.setSubtitle("Sub title");
 
@@ -56,7 +62,10 @@ public class MainActivity extends BaseActivity {
     @OnClick({R.id.btn01_share_data,
             R.id.btn02_send_binary_content,
             R.id.btn03_scrollbarstyle,
-            R.id.btn04_fragment})
+            R.id.btn04_fragment,
+            R.id.btn05_statusbar_style,
+            R.id.btn06_open_source_library
+    })
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn01_share_data:
@@ -71,13 +80,20 @@ public class MainActivity extends BaseActivity {
             case R.id.btn04_fragment:
                 toOtherActivity(Activity04_Fragment.class);
                 break;
+            case R.id.btn05_statusbar_style:
+                toOtherActivity(Activity05_StatusBarStyle.class);
+                break;
+            case R.id.btn06_open_source_library:
+                toOtherActivity(Activity06_OpenSourceLibrary.class);
+                break;
+
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        getMenuInflater().inflate(R.menu.menu_main,menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -97,7 +113,7 @@ public class MainActivity extends BaseActivity {
                     break;
             }
 
-            if(!msg.equals("")) {
+            if (!msg.equals("")) {
                 Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
             }
             return true;

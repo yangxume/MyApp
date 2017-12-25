@@ -33,19 +33,27 @@
             <Button
                 android:id="@+id/btn02_send_binary_content"
                 style="@style/style_common_btn"
-                android:text="btn2" />
+                android:text="@string/str2_send_binary_content" />
 
             <Button
                 android:id="@+id/btn03_scrollbarstyle"
                 style="@style/style_common_btn"
-                android:text="3scrollbarstyle" />
+                android:text="@string/str3_scrollbar_style" />
 
             <Button
                 android:id="@+id/btn04_fragment"
                 style="@style/style_common_btn"
-                android:text="4-fragment" />
+                android:text="@string/str4_fragment" />
 
+            <Button
+                android:id="@+id/btn05_statusbar_style"
+                style="@style/style_common_btn"
+                android:text="@string/str5_status_bar_style" />
 
+            <Button
+                android:id="@+id/btn06_open_source_library"
+                style="@style/style_common_btn"
+                android:text="@string/str6_open_source_library" />
         </LinearLayout>
 
     </ScrollView>

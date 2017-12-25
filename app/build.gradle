@@ -32,17 +32,40 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     //    兼容一些 Framework API，如 Context.getDrawable() 和View.performAccessibilityAction()，大小为 602k
-    implementation 'com.android.support:support-compat:24.2.1'
-    //    提供一系列核心的工具类，如 AsyncTaskLoader 和 PermissionChecker，大小为 90k
-    implementation 'com.android.support:support-core-utils:24.2.1'
-    //    提供一系列核心的 UI，如 ViewPager、 NestedScrollView，大小为 240k
-    implementation 'com.android.support:support-core-ui:24.2.1'
-    //    android.media 兼容库，包括 MediaBrowser 和 MediaSession，大小为 248k
-    implementation 'com.android.support:support-media-compat:24.2.1'
-    //    跟fragment相关部分，大小为 136k。
-    // V4这个子库依赖了其他4个子库，所以我们一旦依赖这个库就会自动导入其他4个子库，这跟直接依赖整个support-v4效果类似
-    implementation 'com.android.support:support-fragment:24.2.1'
+//    implementation 'com.android.support:support-compat:24.2.1'
+//    //    提供一系列核心的工具类，如 AsyncTaskLoader 和 PermissionChecker，大小为 90k
+//    implementation 'com.android.support:support-core-utils:24.2.1'
+//    //    提供一系列核心的 UI，如 ViewPager、 NestedScrollView，大小为 240k
+//    implementation 'com.android.support:support-core-ui:24.2.1'
+//    //    android.media 兼容库，包括 MediaBrowser 和 MediaSession，大小为 248k
+//    implementation 'com.android.support:support-media-compat:24.2.1'
+//    //    跟fragment相关部分，大小为 136k。
+//    // V4这个子库依赖了其他4个子库，所以我们一旦依赖这个库就会自动导入其他4个子库，这跟直接依赖整个support-v4效果类似
+//    implementation 'com.android.support:support-fragment:24.2.1'
     //    support-annotations 为一些注解的声明库，如我们比较常用的 RequiresApi、UiThread、NonNull。大小为 21k
     implementation 'com.android.support:support-annotations:26.0.0-beta1'
     implementation 'com.android.support:support-v4:26.0.0-beta1'
+
+    //Icon 库    https://github.com/mikepenz/Android-Iconics
+    implementation "com.mikepenz:iconics-core:3.0.0@aar"
+//    implementation "com.android.support:appcompat-v7:${supportLibVersion}"
+
+    //this adds all ui view widgets (IconicsButton, IconicsImageView, ...)
+    implementation "com.mikepenz:iconics-views:3.0.0@aar"
+
+    implementation 'com.mikepenz:google-material-typeface:3.0.1.2.original@aar'
+    implementation 'com.mikepenz:material-design-iconic-typeface:2.2.0.4@aar'
+    implementation 'com.mikepenz:fontawesome-typeface:4.7.0.2@aar'
+    implementation 'com.mikepenz:octicons-typeface:3.2.0.4@aar'
+    implementation 'com.mikepenz:meteocons-typeface:1.1.0.4@aar'
+    implementation 'com.mikepenz:community-material-typeface:2.0.46.1@aar'
+    implementation 'com.mikepenz:weather-icons-typeface:2.0.10.4@aar'
+    implementation 'com.mikepenz:typeicons-typeface:2.0.7.4@aar'
+    implementation 'com.mikepenz:entypo-typeface:1.0.0.4@aar'
+    implementation 'com.mikepenz:devicon-typeface:2.0.0.4@aar'
+    implementation 'com.mikepenz:foundation-icons-typeface:3.0.0.4@aar'
+    implementation 'com.mikepenz:ionicons-typeface:2.0.1.4@aar'
+    implementation 'com.mikepenz:pixeden-7-stroke-typeface:1.2.0.2@aar'
+
+
 }

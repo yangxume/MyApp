@@ -21,6 +21,9 @@
         <activity android:name=".Activity02_Multimedia"/>
         <activity android:name=".Activity03_ScrollBarStyle"/>
         <activity android:name=".Activity04_Fragment"/>
+        <activity android:name=".Activity05_StatusBarStyle"/>
+        <activity android:name=".Activity06_OpenSourceLibrary"/>
+        <activity android:name=".Activity06_Icon"/>
     </application>
 
 </manifest>

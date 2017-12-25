@@ -2,13 +2,19 @@
     <string name="app_name">myapp_app_demo</string>
 
     <!--1.android 分享操作-->
-    <string name="str_01_share">android share</string>
+    <string name="str_01_share">1_android share data</string>
+
+    <string name="str2_send_binary_content">2_send_binary_content</string>
+    <string name="str3_scrollbar_style">3_scrollbarstyle</string>
+    <string name="str4_fragment">4_fragment</string>
+    <string name="str5_status_bar_style">5_statusbar_style</string>
+    <string name="str6_open_source_library" >6_open_source_library</string>
+
     <string name="share">分享</string>
     <string name="send_to">发送</string>
     <string name="share_text">分享文本内容</string>
     <string name="share_binary">分享二进制内容</string>
     <string name="share_multiple_pieces_of_content">发送多块内容</string>
-
 
     <string name="str_02_Multimedia">Multimedia</string>
     <string name="audio_player">音频播放</string>
