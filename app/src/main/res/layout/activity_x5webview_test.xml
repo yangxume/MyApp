@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_filechoose"
+        style="@style/style_common_btn"
+        android:text="1_filechoose"/>
+    <Button
+        android:id="@+id/btn_fullscreen"
+        style="@style/style_common_btn"
+        android:text="2_fullscreen"/>
+
+    <Button
+        android:id="@+id/btn_browser"
+        style="@style/style_common_btn"
+        android:text="3_browser"/>
+
+
+</LinearLayout>

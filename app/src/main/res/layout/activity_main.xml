@@ -54,6 +54,10 @@
                 android:id="@+id/btn06_open_source_library"
                 style="@style/style_common_btn"
                 android:text="@string/str6_open_source_library" />
+            <Button
+                android:id="@+id/btn07_x5webview"
+                style="@style/style_common_btn"
+                android:text="@string/str7_x5webview" />
         </LinearLayout>
 
     </ScrollView>
