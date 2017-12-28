@@ -35,6 +35,8 @@ public class ActivityX5_WebViewTest extends BaseActivity {
     Button btnFullscreen;
     @BindView(R.id.btn_browser)
     Button btnBrowser;
+    @BindView(R.id.btn_ppt)
+    Button btnPpt;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,7 +47,11 @@ public class ActivityX5_WebViewTest extends BaseActivity {
 
     }
 
-    @OnClick({R.id.btn_filechoose, R.id.btn_fullscreen, R.id.btn_browser})
+    @OnClick({R.id.btn_filechoose,
+            R.id.btn_fullscreen,
+            R.id.btn_browser,
+            R.id.btn_ppt
+    })
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_filechoose:
@@ -57,6 +63,11 @@ public class ActivityX5_WebViewTest extends BaseActivity {
             case R.id.btn_browser:
                 toOtherActivity(ActivityX5_Browser.class);
                 break;
+            case R.id.btn_ppt:
+                toOtherActivity(ActivityX5_PPT.class);
+                break;
+
+
         }
     }
 }

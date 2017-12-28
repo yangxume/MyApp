@@ -42,6 +42,8 @@ import com.tencent.smtt.utils.TbsLog;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+
+//https://www.qianduan.net/qqliu-lan-qi-x5nei-he-wen-ti-hui-zong/
 public class ActivityX5_Browser extends Activity {
 	/**
 	 * 作为一个浏览器的示例展示出来，采用android+web的模式

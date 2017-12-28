@@ -17,6 +17,9 @@
         android:id="@+id/btn_browser"
         style="@style/style_common_btn"
         android:text="3_browser"/>
-
+    <Button
+        android:id="@+id/btn_ppt"
+        style="@style/style_common_btn"
+        android:text="4_ppt"/>
 
 </LinearLayout>

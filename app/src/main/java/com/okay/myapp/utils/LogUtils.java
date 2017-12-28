@@ -8,7 +8,7 @@ public class LogUtils {
 
 	/** 日志输出时的TAG */
 
-	private static String mTag = "okay";
+	private static String mTag = "myapp";
 
 	protected static boolean IS_LOG = false;
 
