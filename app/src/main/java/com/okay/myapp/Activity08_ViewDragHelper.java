@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
+import com.okay.myapp.ui.fragment.Fragment08_Custom_Layout;
 import com.okay.myapp.ui.fragment.Fragment08_DrawerLayout;
 import com.okay.myapp.ui.fragment.Fragment08_SlidingPaneLayout;
 
@@ -25,7 +26,7 @@ import butterknife.OnClick;
  * ${FILENAME}
  * <p>
  * Description
- *
+ * <p>
  * Update records:
  */
 
@@ -38,6 +39,8 @@ public class Activity08_ViewDragHelper extends BaseActivity {
     Button btnDrawerLayout;
     @BindView(R.id.fl_main)
     FrameLayout flMain;
+    @BindView(R.id.btn_custom_layout)
+    Button btnCustomLayout;
 
 
     @Override
@@ -47,7 +50,10 @@ public class Activity08_ViewDragHelper extends BaseActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_SlidingPaneLayout, R.id.btn_DrawerLayout})
+    @OnClick({R.id.btn_SlidingPaneLayout,
+            R.id.btn_DrawerLayout,
+            R.id.btn_custom_layout
+    })
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_SlidingPaneLayout:
@@ -56,7 +62,7 @@ public class Activity08_ViewDragHelper extends BaseActivity {
 
                 FragmentManager fm = getSupportFragmentManager();
                 FragmentTransaction transaction = fm.beginTransaction();
-                transaction.replace(R.id.fl_main,new Fragment08_SlidingPaneLayout());
+                transaction.replace(R.id.fl_main, new Fragment08_SlidingPaneLayout());
                 transaction.commit();
 
                 break;
@@ -64,8 +70,17 @@ public class Activity08_ViewDragHelper extends BaseActivity {
                 flMain.removeAllViews();
                 FragmentManager fm2 = getSupportFragmentManager();
                 FragmentTransaction transaction1 = fm2.beginTransaction();
-                transaction1.replace(R.id.fl_main,new Fragment08_DrawerLayout());
+                transaction1.replace(R.id.fl_main, new Fragment08_DrawerLayout());
                 transaction1.commit();
+
+                break;
+
+            case R.id.btn_custom_layout:
+                flMain.removeAllViews();
+                FragmentManager fm3 = getSupportFragmentManager();
+                FragmentTransaction transaction3 = fm3.beginTransaction();
+                transaction3.replace(R.id.fl_main, new Fragment08_Custom_Layout());
+                transaction3.commit();
 
                 break;
         }

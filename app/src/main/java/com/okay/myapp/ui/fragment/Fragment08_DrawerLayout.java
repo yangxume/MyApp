@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,6 +56,8 @@ import butterknife.Unbinder;
 
 public class Fragment08_DrawerLayout extends Fragment {
 
+    private static final String TAG = Fragment08_DrawerLayout.class.getSimpleName();
+
     @BindView(R.id.btn_open_left_drawer)
     Button btnOpenLeftDrawer;
     @BindView(R.id.btn_open_right_drawer)
@@ -87,9 +90,35 @@ public class Fragment08_DrawerLayout extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment08_drawerlayout, container, false);
         unbinder = ButterKnife.bind(this, view);
+        drawerlayout.addDrawerListener(mDrawerListener);
         return view;
 
     }
+
+    DrawerLayout.DrawerListener mDrawerListener = new DrawerLayout.DrawerListener() {
+        @Override
+        public void onDrawerSlide(View drawerView, float slideOffset) {
+            Log.e(TAG, "onDrawerSlide: " );
+        }
+
+        @Override
+        public void onDrawerOpened(View drawerView) {
+            Log.e(TAG, "onDrawerOpened: " );
+
+        }
+
+        @Override
+        public void onDrawerClosed(View drawerView) {
+            Log.e(TAG, "onDrawerClosed: " );
+
+        }
+
+        @Override
+        public void onDrawerStateChanged(int newState) {
+            Log.e(TAG, "onDrawerStateChanged: " );
+
+        }
+    };
 
     @Override
     public void onResume() {
@@ -105,6 +134,12 @@ public class Fragment08_DrawerLayout extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
+        if (mDrawerListener != null) {
+
+            drawerlayout.removeDrawerListener(mDrawerListener);
+            mDrawerListener = null;
+
+        }
     }
 
     @OnClick({R.id.btn_open_left_drawer, R.id.btn_open_right_drawer})
@@ -125,16 +160,17 @@ public class Fragment08_DrawerLayout extends Fragment {
         ArrayAdapter<String> left_adapter = new
                 ArrayAdapter<>(getActivity(),
 
-                android.R.layout.simple_list_item_1, android.R.id.text1,titleArray);
+                android.R.layout.simple_list_item_1, android.R.id.text1, titleArray);
 
         lvDrawerLeft.setAdapter(left_adapter);
         drawerlayout.openDrawer(lvDrawerLeft);
     }
+
     private void openRightDrawer() {
         ArrayAdapter<String> right_adapter = new
                 ArrayAdapter<>(getActivity(),
 
-                android.R.layout.simple_list_item_1, android.R.id.text1,settingArray);
+                android.R.layout.simple_list_item_1, android.R.id.text1, settingArray);
         lvDrawerRight.setAdapter(right_adapter);
         drawerlayout.openDrawer(lvDrawerRight);
 

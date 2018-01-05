@@ -19,6 +19,11 @@
             style="@style/style_common_btn"
             android:text="DrawerLayout" />
 
+        <Button
+            android:id="@+id/btn_custom_layout"
+            style="@style/style_common_btn"
+            android:text="customlayout" />
+
     </LinearLayout>
 
     <FrameLayout
