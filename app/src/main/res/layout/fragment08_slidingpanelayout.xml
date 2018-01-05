@@ -1,0 +1,34 @@
+<android.support.v4.widget.SlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sliding_pane_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_green_light"
+        android:text="SlidingPaneLayout_left" />
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_light"
+        android:orientation="vertical"
+        android:text="SlidingPaneLayout_left">
+
+        <Button
+            android:id="@+id/btn_open_pane"
+            style="@style/style_common_btn"
+            android:textColor="@android:color/black"
+            android:text="open_pane" />
+
+        <Button
+            android:id="@+id/btn_close_pane"
+            style="@style/style_common_btn"
+            android:textColor="@android:color/black"
+            android:text="close_pane" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.SlidingPaneLayout>

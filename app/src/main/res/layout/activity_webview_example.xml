@@ -5,21 +5,25 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/btn_sys_webview"
+        style="@style/style_common_btn"
+        android:text="1_sys_webview"/>
+    <Button
         android:id="@+id/btn_filechoose"
         style="@style/style_common_btn"
-        android:text="1_filechoose"/>
+        android:text="2_filechoose"/>
     <Button
         android:id="@+id/btn_fullscreen"
         style="@style/style_common_btn"
-        android:text="2_fullscreen"/>
+        android:text="3_fullscreen"/>
 
     <Button
         android:id="@+id/btn_browser"
         style="@style/style_common_btn"
-        android:text="3_browser"/>
+        android:text="4_browser"/>
     <Button
         android:id="@+id/btn_ppt"
         style="@style/style_common_btn"
-        android:text="4_ppt"/>
+        android:text="5_ppt"/>
 
 </LinearLayout>

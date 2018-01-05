@@ -5,14 +5,10 @@
     android:background="@android:color/holo_orange_light"
     android:orientation="vertical">
 
-    <com.okay.myapp.mywebview.X5WebView
-        android:background="@android:color/darker_gray"
-        android:id="@+id/x5_webview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-    </com.okay.myapp.mywebview.X5WebView>
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="left_menu"
+        />
 
 </LinearLayout>

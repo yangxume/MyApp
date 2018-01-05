@@ -1,4 +1,4 @@
-package com.okay.myapp.x5webview;
+package com.okay.myapp.mywebview;
 
 import android.app.Activity;
 import android.content.res.Configuration;

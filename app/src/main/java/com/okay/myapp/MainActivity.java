@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.okay.myapp.x5webview.ActivityX5_WebViewTest;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -31,8 +29,10 @@ public class MainActivity extends BaseActivity {
     Button btn05StatusbarStyle;
     @BindView(R.id.btn06_open_source_library)
     Button btn06OpenSourceLibrary;
-    @BindView(R.id.btn07_x5webview)
-    Button btn07X5webview;
+    @BindView(R.id.btn07_webview)
+    Button btn07Webview;
+    @BindView(R.id.btn08_viewdraghelper)
+    Button btn08Viewdraghelper;
 
 
     @Override
@@ -69,7 +69,8 @@ public class MainActivity extends BaseActivity {
             R.id.btn04_fragment,
             R.id.btn05_statusbar_style,
             R.id.btn06_open_source_library,
-            R.id.btn07_x5webview
+            R.id.btn07_webview,
+            R.id.btn08_viewdraghelper
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -91,10 +92,12 @@ public class MainActivity extends BaseActivity {
             case R.id.btn06_open_source_library:
                 toOtherActivity(Activity06_OpenSourceLibrary.class);
                 break;
-            case R.id.btn07_x5webview:
-                toOtherActivity(ActivityX5_WebViewTest.class);
+            case R.id.btn07_webview:
+                toOtherActivity(Activity07_WebViewExample.class);
                 break;
-
+            case R.id.btn08_viewdraghelper:
+                toOtherActivity(Activity08_ViewDragHelper.class);
+                break;
         }
     }
 

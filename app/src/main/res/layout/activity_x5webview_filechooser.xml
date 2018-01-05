@@ -9,13 +9,13 @@
         android:layout_height="match_parent"></FrameLayout>
 
 
-    <com.okay.myapp.x5webview.X5WebView
+    <com.okay.myapp.mywebview.X5WebView
         android:id="@+id/web_filechooser"
         android:layout_width="fill_parent"
         android:layout_height="match_parent">
 
 
-    </com.okay.myapp.x5webview.X5WebView>
+    </com.okay.myapp.mywebview.X5WebView>
 
 
 </RelativeLayout>

@@ -55,9 +55,13 @@
                 style="@style/style_common_btn"
                 android:text="@string/str6_open_source_library" />
             <Button
-                android:id="@+id/btn07_x5webview"
+                android:id="@+id/btn07_webview"
                 style="@style/style_common_btn"
-                android:text="@string/str7_x5webview" />
+                android:text="@string/str7_webview" />
+            <Button
+                android:id="@+id/btn08_viewdraghelper"
+                style="@style/style_common_btn"
+                android:text="@string/str8_viewdraghelper" />
         </LinearLayout>
 
     </ScrollView>

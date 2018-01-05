@@ -1,0 +1,39 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_open_left_drawer"
+            style="@style/style_common_btn"
+            android:text="打开左侧面板" />
+
+        <Button
+            android:id="@+id/btn_open_right_drawer"
+            style="@style/style_common_btn"
+            android:text="打开右侧面板" />
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lv_drawer_left"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@android:color/darker_gray" />
+
+    <ListView
+        android:id="@+id/lv_drawer_right"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@android:color/holo_blue_light" />
+
+</android.support.v4.widget.DrawerLayout>
