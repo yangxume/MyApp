@@ -26,4 +26,9 @@
         style="@style/style_common_btn"
         android:text="5_ppt"/>
 
+    <Button
+        android:id="@+id/btn_office"
+        style="@style/style_common_btn"
+        android:text="6_pre_office"/>
+
 </LinearLayout>

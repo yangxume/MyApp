@@ -42,6 +42,8 @@ public class Activity07_WebViewExample extends BaseActivity {
     Button btnBrowser;
     @BindView(R.id.btn_ppt)
     Button btnPpt;
+    @BindView(R.id.btn_office)
+    Button btnOffice;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -57,7 +59,8 @@ public class Activity07_WebViewExample extends BaseActivity {
             R.id.btn_filechoose,
             R.id.btn_fullscreen,
             R.id.btn_browser,
-            R.id.btn_ppt
+            R.id.btn_ppt,
+            R.id.btn_office
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -75,6 +78,9 @@ public class Activity07_WebViewExample extends BaseActivity {
                 break;
             case R.id.btn_ppt:
                 toOtherActivity(ActivityX5_PPT.class);
+                break;
+            case R.id.btn_office:
+                toOtherActivity(Activity07_WebView_LoadOffice.class);
                 break;
 
 

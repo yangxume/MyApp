@@ -1,13 +1,9 @@
 package com.okay.myapp;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
-
-import com.mikepenz.fontawesome_typeface_library.FontAwesome;
-import com.mikepenz.iconics.IconicsDrawable;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -43,12 +39,12 @@ public class Activity06_Icon extends BaseActivity {
 //        setSupportActionBar(toolbar);
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        IconicsDrawable iconicsDrawable = new IconicsDrawable(this)
-                .icon(FontAwesome.Icon.faw_android)
-                .color(Color.RED)
-                .sizeDp(50);
-
-        iv1.setImageDrawable(iconicsDrawable);
+//        IconicsDrawable iconicsDrawable = new IconicsDrawable(this)
+//                .icon(FontAwesome.Icon.faw_android)
+//                .color(Color.RED)
+//                .sizeDp(50);
+//
+//        iv1.setImageDrawable(iconicsDrawable);
 
 
     }
