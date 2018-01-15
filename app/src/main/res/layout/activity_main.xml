@@ -62,6 +62,11 @@
                 android:id="@+id/btn08_viewdraghelper"
                 style="@style/style_common_btn"
                 android:text="@string/str8_viewdraghelper" />
+
+            <Button
+                android:id="@+id/btn09_android_service"
+                style="@style/style_common_btn"
+                android:text="@string/str9_android_service" />
         </LinearLayout>
 
     </ScrollView>

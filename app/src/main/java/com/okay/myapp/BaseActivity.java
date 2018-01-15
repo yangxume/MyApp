@@ -1,5 +1,6 @@
 package com.okay.myapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -24,10 +25,13 @@ public class BaseActivity extends AppCompatActivity {
 
     private static final String TAG = BaseActivity.class.getSimpleName();
 
+    public Context ctx;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.e(TAG, "onCreate: " );
+        ctx = BaseActivity.this;
     }
 
     protected <T> void toOtherActivity(Class<T> tClass){

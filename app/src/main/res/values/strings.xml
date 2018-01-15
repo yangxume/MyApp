@@ -11,6 +11,7 @@
     <string name="str6_open_source_library" >6_open_source_library</string>
     <string name="str7_webview">7_webview</string>
     <string name="str8_viewdraghelper">8_ViewDragHelper</string>
+    <string name="str9_android_service">9_android_service</string>
 
     <string name="share">分享</string>
     <string name="send_to">发送</string>

@@ -33,6 +33,8 @@ public class MainActivity extends BaseActivity {
     Button btn07Webview;
     @BindView(R.id.btn08_viewdraghelper)
     Button btn08Viewdraghelper;
+    @BindView(R.id.btn09_android_service)
+    Button btn09AndroidService;
 
 
     @Override
@@ -70,7 +72,8 @@ public class MainActivity extends BaseActivity {
             R.id.btn05_statusbar_style,
             R.id.btn06_open_source_library,
             R.id.btn07_webview,
-            R.id.btn08_viewdraghelper
+            R.id.btn08_viewdraghelper,
+            R.id.btn09_android_service
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -97,6 +100,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn08_viewdraghelper:
                 toOtherActivity(Activity08_ViewDragHelper.class);
+                break;
+            case R.id.btn09_android_service:
+                toOtherActivity(Activity09_Android_Service.class);
                 break;
         }
     }

@@ -41,6 +41,8 @@
         <activity android:name=".Activity06_Icon"/>
         <activity android:name=".Activity07_WebViewExample"/>
         <activity android:name=".Activity08_ViewDragHelper"/>
+        <activity android:name=".Activity09_Android_Service"/>
+        <service android:name=".service.MyService"/>
 
         <!--WebView-->
         <!--

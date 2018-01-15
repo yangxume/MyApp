@@ -10,7 +10,7 @@ public class LogUtils {
 
 	private static String mTag = "myapp";
 
-	protected static boolean IS_LOG = false;
+	protected static boolean IS_LOG = true;
 
 	public static boolean setLogIsOpen(boolean islog) {
 		IS_LOG = islog;
