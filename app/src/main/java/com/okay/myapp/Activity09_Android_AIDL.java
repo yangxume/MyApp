@@ -31,10 +31,10 @@ import com.okay.myapp.utils.LogUtils;
  * Update records:
  */
 
-public class Activity09_Android_Service extends BaseActivity {
+public class Activity09_Android_AIDL extends BaseActivity {
 
 
-    private static final String TAG = Activity09_Android_Service.class.getSimpleName();
+    private static final String TAG = Activity09_Android_AIDL.class.getSimpleName();
     private Button btn_binder;
     private Button btn_aidl_binder;
 

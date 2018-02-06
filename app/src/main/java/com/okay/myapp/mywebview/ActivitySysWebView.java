@@ -8,6 +8,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+import com.okay.myapp.AndroidtoJs;
 import com.okay.myapp.BaseActivity;
 import com.okay.myapp.R;
 
@@ -36,8 +37,9 @@ public class ActivitySysWebView extends BaseActivity {
     WebView mWebview;
 
 
-    private String url_163 = "http://news.163.com/";
-    private String url_baidu = "https://www.baidu.com/";
+//    private String url_163 = "http://news.163.com/";
+//    private String url_baidu = "https://www.baidu.com/";
+    private String url_ppt = "http://hotfix.oos.xk12.cn/p/PowerPointFrame.aspx?WOPISrc=http%3A%2F%2Fhotfix.wopi.xk12.cn%2Fwopi%2Ffiles%2Fhttp%3A%2F%2Frw.okjiaoyu.cn%2Frw_UTXWnJXLd6.pptx&action=embedview&sc=031184784059&token=c749127ad9cc40fb897dceb110c6ad3d&system_id=61951185794&md5=rw_UTXWnJXLd6.pptx&isokaypad=1";
 
 
     @Override
@@ -48,7 +50,6 @@ public class ActivitySysWebView extends BaseActivity {
 
         initWebView();
 
-        mWebview.loadUrl(url_163);
 
 
 
@@ -70,8 +71,19 @@ public class ActivitySysWebView extends BaseActivity {
         settings.setBuiltInZoomControls(true);
         mWebview.setFocusable(false);
         //设置默认的字体大小，默认为16，有效值区间在1-72之间。
-        mWebview.getSettings().setDefaultFontSize(18);
+        settings.setDefaultFontSize(18);
 
+        // 设置与Js交互的权限
+        settings.setJavaScriptEnabled(true);
+
+        // 通过addJavascriptInterface()将Java对象映射到JS对象
+        //参数1：Javascript对象名
+        //参数2：Java对象名
+        mWebview.addJavascriptInterface(new AndroidtoJs(), "resExceptionMsg");//AndroidtoJS类对象映射到js的test对象
+
+        // 加载JS代码
+        // 格式规定为:file:///android_asset/文件名.html
+        mWebview.loadUrl("file:///android_asset/javascript.html");
 
         /**
 

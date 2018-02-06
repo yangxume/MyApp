@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xy.aidl_client.MainActivity">
+
+    <Button
+        android:id="@+id/btn_getBookList"
+        style="@style/style_common_btn"
+        android:text="获取书籍列表" />
+
+    <Button
+        android:id="@+id/btn_addBook"
+        style="@style/style_common_btn"
+        android:text="添加书籍" />
+    <Button
+        android:id="@+id/btn_test_bindService"
+        style="@style/style_common_btn"
+        android:text="test_bindService" />
+    <Button
+        android:id="@+id/btn_test_unbindService"
+        style="@style/style_common_btn"
+        android:text="test_unbindService" />
+
+</LinearLayout>

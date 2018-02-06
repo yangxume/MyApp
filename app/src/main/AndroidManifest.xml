@@ -23,6 +23,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -41,7 +42,7 @@
         <activity android:name=".Activity06_Icon"/>
         <activity android:name=".Activity07_WebViewExample"/>
         <activity android:name=".Activity08_ViewDragHelper"/>
-        <activity android:name=".Activity09_Android_Service"/>
+        <activity android:name=".Activity09_Android_AIDL"/>
         <service android:name=".service.MyService"/>
 
         <!--WebView-->
@@ -51,7 +52,7 @@
         -->
         <activity
             android:hardwareAccelerated="true"
-            android:screenOrientation="portrait"
+            android:screenOrientation="landscape"
             android:name=".mywebview.ActivitySysWebView"/>
         <activity android:name=".mywebview.ActivityX5_FileChooser"/>
         <activity android:name=".mywebview.ActivityX5_FullScreen"/>

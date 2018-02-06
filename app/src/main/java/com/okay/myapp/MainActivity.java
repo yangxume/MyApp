@@ -102,7 +102,7 @@ public class MainActivity extends BaseActivity {
                 toOtherActivity(Activity08_ViewDragHelper.class);
                 break;
             case R.id.btn09_android_service:
-                toOtherActivity(Activity09_Android_Service.class);
+//                toOtherActivity(Activity09_Android_Service.class);
                 break;
         }
     }
