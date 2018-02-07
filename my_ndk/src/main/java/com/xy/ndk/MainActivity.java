@@ -9,7 +9,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv;
 
     static {
-        System.load("hello");
+//        System.load("hello");
+          System.loadLibrary("hello");
     }
 
     public static native String getStringFromJni();

@@ -1,1 +1,1 @@
-include ':app', ':my_aidl_server', ':my_aidl_client', ':my_jni', ':my_ndk'
+include ':app', ':my_aidl_server', ':my_aidl_client', ':my_jni', ':my_ndk', ':tencent_x5'

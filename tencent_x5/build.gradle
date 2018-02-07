@@ -6,7 +6,7 @@ android {
 
 
     defaultConfig {
-        applicationId "com.xy.ndk"
+        applicationId "com.xy.tencent_x5"
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
@@ -14,21 +14,12 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        ndk{
-            moduleName "hello" //生成的so名字
-            ldLibs "log", "z", "m"
-            abiFilters "armeabi", "armeabi-v7a", "x86" //输出指定的三种abi体系下的so库
+        // Specifies the ABI configurations of your native
+        // libraries Gradle should build and package with your APK.
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
         }
-//        sourceSets.main {
-//            jni.srcDirs = []//disable automatic ndk-build call
-//            jniLibs.srcDir "src/main/libs"
-//        }
     }
-
-    sourceSets.main {
-        jniLibs.srcDir 'libs'
-    }
-
     buildTypes {
         release {
             minifyEnabled false
