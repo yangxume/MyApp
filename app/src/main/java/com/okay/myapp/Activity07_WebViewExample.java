@@ -6,10 +6,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.okay.myapp.mywebview.ActivitySysWebView;
+import com.okay.myapp.mywebview.ActivitySysWebViewCallJs;
 import com.okay.myapp.mywebview.ActivityX5_Browser;
 import com.okay.myapp.mywebview.ActivityX5_FileChooser;
 import com.okay.myapp.mywebview.ActivityX5_FullScreen;
-import com.okay.myapp.mywebview.ActivityX5_PPT;
+import com.okay.myapp.mywebview.ActivityX5_OpenPPT;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,6 +45,8 @@ public class Activity07_WebViewExample extends BaseActivity {
     Button btnPpt;
     @BindView(R.id.btn_office)
     Button btnOffice;
+    @BindView(R.id.btn_js_call_android_method)
+    Button btnJsCallAndroidMethod;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -60,7 +63,8 @@ public class Activity07_WebViewExample extends BaseActivity {
             R.id.btn_fullscreen,
             R.id.btn_browser,
             R.id.btn_ppt,
-            R.id.btn_office
+            R.id.btn_office,
+            R.id.btn_js_call_android_method
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -77,12 +81,11 @@ public class Activity07_WebViewExample extends BaseActivity {
                 toOtherActivity(ActivityX5_Browser.class);
                 break;
             case R.id.btn_ppt:
-                toOtherActivity(ActivityX5_PPT.class);
+                toOtherActivity(ActivityX5_OpenPPT.class);
                 break;
-            case R.id.btn_office:
-                toOtherActivity(Activity07_WebView_LoadOffice.class);
+            case R.id.btn_js_call_android_method:
+                toOtherActivity(ActivitySysWebViewCallJs.class);
                 break;
-
 
         }
     }

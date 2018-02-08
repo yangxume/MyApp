@@ -40,7 +40,7 @@ import butterknife.ButterKnife;
  * Update records:
  */
 
-public class ActivityX5_PPT extends BaseActivity {
+public class ActivityX5_OpenPPT extends BaseActivity {
 
     @BindView(R.id.x5_webview)
     X5WebView x5Webview;
@@ -52,7 +52,7 @@ public class ActivityX5_PPT extends BaseActivity {
 
 
     private Context ctx;
-    private static final String TAG = ActivityX5_PPT.class.getSimpleName();
+    private static final String TAG = ActivityX5_OpenPPT.class.getSimpleName();
     ;
 
     @Override
@@ -60,7 +60,7 @@ public class ActivityX5_PPT extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_x5webview_ppt);
         ButterKnife.bind(this);
-        ctx = ActivityX5_PPT.this;
+        ctx = ActivityX5_OpenPPT.this;
 
         initWebView();
 

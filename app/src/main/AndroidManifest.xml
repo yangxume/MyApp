@@ -52,12 +52,12 @@
         -->
         <activity
             android:hardwareAccelerated="true"
-            android:screenOrientation="landscape"
             android:name=".mywebview.ActivitySysWebView"/>
+        <activity android:name=".mywebview.ActivitySysWebViewCallJs"/>
         <activity android:name=".mywebview.ActivityX5_FileChooser"/>
         <activity android:name=".mywebview.ActivityX5_FullScreen"/>
         <activity android:name=".mywebview.ActivityX5_Browser"/>
-        <activity android:name=".mywebview.ActivityX5_PPT"/>
+        <activity android:name=".mywebview.ActivityX5_OpenPPT"/>
 
 
 

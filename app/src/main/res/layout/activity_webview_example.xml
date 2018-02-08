@@ -9,6 +9,10 @@
         style="@style/style_common_btn"
         android:text="1_sys_webview"/>
     <Button
+        android:id="@+id/btn_js_call_android_method"
+        style="@style/style_common_btn"
+        android:text="js_call_android_method"/>
+    <Button
         android:id="@+id/btn_filechoose"
         style="@style/style_common_btn"
         android:text="2_filechoose"/>

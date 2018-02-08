@@ -7,14 +7,14 @@
 		<script>
 			function callAndroid() {
 				// 由于对象映射，所以调用test对象等于调用Android映射的对象
-				resExceptionMsg.sendResExceptionMsg();
+				resExceptionMsg.sendResExceptionMsg("message from js!!!");
 			}
 		</script>
 	</head>
 
 	<body>
 		//点击按钮则调用callAndroid函数
-		<button type="button" id="button1" onclick="callAndroid()">test</button>
+		<button type="button" id="button1" onclick="callAndroid()">test js call android method</button>
 	</body>
 
 </html>

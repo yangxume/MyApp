@@ -4,12 +4,15 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Toast;
 
 import com.okay.myapp.BaseActivity;
 import com.okay.myapp.R;
+import com.okay.myapp.utils.LogUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,28 +31,24 @@ import butterknife.ButterKnife;
  * Update records:
  */
 
-public class ActivitySysWebView extends BaseActivity {
+public class ActivitySysWebViewCallJs extends BaseActivity {
 
-    private static final String TAG = ActivitySysWebView.class.getSimpleName();
+    private static final String TAG = ActivitySysWebViewCallJs.class.getSimpleName();
 
     @BindView(R.id.webview)
     WebView mWebview;
 
-
-//    private String url_163 = "http://news.163.com/";
-//    private String url_baidu = "https://www.baidu.com/";
-    private String url_ppt = "http://hotfix.oos.xk12.cn/p/PowerPointFrame.aspx?WOPISrc=http%3A%2F%2Fhotfix.wopi.xk12.cn%2Fwopi%2Ffiles%2Fhttp%3A%2F%2Frw.okjiaoyu.cn%2Frw_UTXWnJXLd6.pptx&action=embedview&sc=031184784059&token=c749127ad9cc40fb897dceb110c6ad3d&system_id=61951185794&md5=rw_UTXWnJXLd6.pptx&isokaypad=1";
-    private String oos_url = "http://oos.okjiaoyu.cn/p/PowerPointFrame.aspx?WOPISrc=http%3A%2F%2Fwopi.okjiaoyu.cn%2Fwopi%2Ffiles%2Fhttp%3A%2F%2Frw.okjiaoyu.cn%2Frw_W0nKnxXHNu.ppt&action=embedview&sc=030295951894&system_id=61951185794&token=a6d973fba95d4befaf0219f27df1f24f&md5=rw_W0nKnxXHNu.ppt&isokaypad=1";
-    private String owa_url = "http://owa.okjiaoyu.cn/op/embed.aspx?src=http://rw.okjiaoyu.cn/rw_W0nKLUmrf2.ppt";
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sys_webview);
+        setContentView(R.layout.activity_sys_webview_calljs);
         ButterKnife.bind(this);
 
         initWebView();
 
+        // 加载JS代码
+        // 格式规定为:file:///android_asset/文件名.html
+        mWebview.loadUrl("file:///android_asset/javascript.html");
     }
 
     /**
@@ -73,7 +72,10 @@ public class ActivitySysWebView extends BaseActivity {
         // 设置与Js交互的权限
         settings.setJavaScriptEnabled(true);
 
-        mWebview.loadUrl(oos_url);
+        // 通过addJavascriptInterface()将Java对象映射到JS对象
+        //参数1：Javascript对象名
+        //参数2：Java对象名
+        mWebview.addJavascriptInterface(new AndroidtoJs(), "resExceptionMsg");//AndroidtoJS类对象映射到js的test对象
 
         /**
 
@@ -84,46 +86,6 @@ public class ActivitySysWebView extends BaseActivity {
          *
          */
         settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
-
-//        mWebview.setWebViewClient(new WebViewClient() {
-//
-//
-//
-//            @Override
-//            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-//
-//
-//                return true;
-//            }
-//
-//            @Override
-//            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
-//                handler.proceed(); //支持http
-//            }
-//
-//            @Override
-//            public void onPageStarted(WebView view, String url, Bitmap favicon) {
-//                super.onPageStarted(view, url, favicon);
-//                LogUtils.d(TAG, "onPageStarted方法：" + url);
-//            }
-//
-//            @Override
-//            public void onPageFinished(WebView view, String url) {
-//                super.onPageFinished(view, url);
-//                LogUtils.d(TAG, "onPageFinished方法：" + url);
-//
-//                mWebview.loadUrl(url);
-//
-//            }
-//
-//            @Override
-//            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
-//                super.onReceivedError(view, request, error);
-//                LogUtils.d(TAG, "onPageFinished方法：" + error.toString());
-//
-//            }
-//        });
-
 
         mWebview.setWebChromeClient(webChromeClient);
     }
@@ -137,28 +99,28 @@ public class ActivitySysWebView extends BaseActivity {
     private WebChromeClient webChromeClient = new WebChromeClient() {
 
         @Override
-        public void onShowCustomView(View view, WebChromeClient.CustomViewCallback callback) {
-              setFullScreen(true);
-              mCustomView = view;
-              mCustomViewCallback = callback;
-              if (mCustomView != null){
-                  ViewGroup parent = (ViewGroup) mWebview.getParent();
-                  parent.removeView(mCustomView);
-                  mCustomView = null;
-              }
+        public void onShowCustomView(View view, CustomViewCallback callback) {
+            setFullScreen(true);
+            mCustomView = view;
+            mCustomViewCallback = callback;
+            if (mCustomView != null) {
+                ViewGroup parent = (ViewGroup) mWebview.getParent();
+                parent.removeView(mCustomView);
+                mCustomView = null;
+            }
         }
 
         @Override
         public void onHideCustomView() {
 
             setFullScreen(false);
-            if (mCustomView != null){
+            if (mCustomView != null) {
                 ViewGroup parent = (ViewGroup) mWebview.getParent();
                 parent.removeView(mCustomView);
                 mCustomView = null;
             }
-            
-            if (mCustomViewCallback != null){
+
+            if (mCustomViewCallback != null) {
                 mCustomViewCallback.onCustomViewHidden();
                 mCustomViewCallback = null;
             }
@@ -185,4 +147,17 @@ public class ActivitySysWebView extends BaseActivity {
 //        }
 
     }
+
+    public class AndroidtoJs extends Object {
+
+        // 定义JS需要调用的方法
+        // 被JS调用的方法必须加入@JavascriptInterface注解
+        @JavascriptInterface
+        public void sendResExceptionMsg(String msg) {
+            LogUtils.d(TAG,"JS调用了Android的sendResExceptionMsg方法");
+            Toast.makeText(ActivitySysWebViewCallJs.this,msg,Toast.LENGTH_LONG).show();
+        }
+    }
+
+
 }
