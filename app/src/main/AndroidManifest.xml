@@ -43,6 +43,7 @@
         <activity android:name=".Activity07_WebViewExample"/>
         <activity android:name=".Activity08_ViewDragHelper"/>
         <activity android:name=".Activity09_Android_AIDL"/>
+        <activity android:name=".Activity10_AboutImage"/>
         <service android:name=".service.MyService"/>
 
         <!--WebView-->

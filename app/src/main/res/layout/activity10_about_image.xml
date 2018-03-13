@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_quality"
+                style="@style/style_common_btn"
+                android:layout_height="@dimen/dp_50"
+                android:hint="请输入0~100之前的质量压缩比quality"
+                android:inputType="number"
+                android:text="50" />
+
+            <Button
+                android:id="@+id/btn1_test_quality_compress"
+                style="@style/style_common_btn"
+                android:text="1.质量压缩测试" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_inSampleSize"
+                style="@style/style_common_btn"
+                android:layout_height="@dimen/dp_50"
+                android:hint="请输入0~10之前的采样率"
+                android:inputType="number"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/btn2_test_insamplesize_compress"
+                style="@style/style_common_btn"
+                android:text="2.采样率压缩测试" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btn3_test_matrix"
+                style="@style/style_common_btn"
+                android:text="3.缩放测试" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher" />
+    </LinearLayout>
+
+
+</ScrollView>
