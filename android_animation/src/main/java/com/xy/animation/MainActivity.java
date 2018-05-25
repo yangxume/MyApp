@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnFrameAnimation;
     @BindView(R.id.btn_tween_animation_rotate)
     Button btnTweenAnimationRotate;
+    @BindView(R.id.btn_t_classroom_demo)
+    Button btnTClassroomDemo;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,14 +43,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.btn_frame_animation, R.id.btn_tween_animation_rotate})
+    @OnClick({R.id.btn_frame_animation,
+            R.id.btn_tween_animation_rotate,
+            R.id.btn_t_classroom_demo
+    })
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_frame_animation:
-                startActivity(new Intent(this,Activity01_Frame_Animation.class));
+                startActivity(new Intent(this, Activity01_FrameAnimation.class));
                 break;
             case R.id.btn_tween_animation_rotate:
-                startActivity(new Intent(this,Activity02_Tween_Animation.class));
+                startActivity(new Intent(this, Activity02_Tween_Animation.class));
+                break;
+            case R.id.btn_t_classroom_demo:
+//                startActivity(new Intent(this, ActivityTClassRoomDemo.class));
                 break;
         }
     }

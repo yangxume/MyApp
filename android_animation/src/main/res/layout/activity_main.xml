@@ -5,24 +5,23 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/btn_frame_animation"
-            android:layout_width="match_parent"
-            android:layout_margin="5dp"
-            android:layout_height="50dp"
-            android:textAllCaps="false"
-            android:text="1_Frame_Animation"/>
+            style="@style/style_common_btn"
+            android:text="1_Frame_Animation" />
+
         <Button
             android:id="@+id/btn_tween_animation_rotate"
-            android:layout_width="match_parent"
-            android:layout_margin="5dp"
-            android:layout_height="50dp"
-            android:textAllCaps="false"
+            style="@style/style_common_btn"
             android:text="2_Tween_Animation_Rotate"/>
 
+        <Button
+            android:id="@+id/btn_t_classroom_demo"
+            style="@style/style_common_btn"
+            android:text="3_t_classroom_demo"/>
 
     </LinearLayout>
 

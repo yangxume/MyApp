@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_record_button" >
+
+    <ImageView
+        android:id="@+id/recordview_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="@null"
+        android:src="@drawable/microphone" />
+
+    <LinearLayout
+        android:id="@+id/recordview_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/recordview_start"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10.0dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_startrecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="按下录音" />
+
+        <TextView
+            android:id="@+id/recordview_text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"/>
+
+        <RelativeLayout
+            android:id="@+id/recordview_linearlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/recordview_text_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="正在录音:" />
+
+            <ImageView
+                android:id="@+id/recordview_img_volume"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/recordview_text_flag"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/audio0" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/recordview_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="50.0dip"
+        android:layout_toRightOf="@id/recordview_start"
+        android:contentDescription="@null"
+        android:src="@drawable/icon_record_delete" />
+
+    <ImageView
+        android:id="@+id/recordview_listen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="50.0dip"
+        android:layout_toLeftOf="@id/recordview_start"
+        android:contentDescription="@null"
+        android:src="@drawable/icon_record_listen" />
+
+</RelativeLayout>

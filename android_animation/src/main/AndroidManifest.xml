@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xy.animation">
 
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,8 +20,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Activity01_Frame_Animation"/>
+        <activity android:name=".Activity01_FrameAnimation"/>
         <activity android:name=".Activity02_Tween_Animation"/>
+        <!--<activity android:name=".ActivityTClassRoomDemo"/>-->
 
     </application>
 

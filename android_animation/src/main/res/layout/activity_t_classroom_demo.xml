@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/fl_01"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_over_class"
+            style="@style/style_common_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="32dp"
+            android:background="@android:color/holo_orange_light"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:drawablePadding="5dp"
+            android:text="下课" />
+
+        <LinearLayout
+            android:layout_width="800dp"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/darker_gray"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_share_screen"
+                style="@style/style_common_tv"
+                android:background="@android:color/holo_orange_light"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:text="分享屏幕" />
+            <TextView
+                android:id="@+id/tv_whiteboard"
+                style="@style/style_common_tv"
+                android:layout_alignRight="@id/tv_over_class"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:text="用白板" />
+            <TextView
+                android:id="@+id/tv_resource"
+                style="@style/style_common_tv"
+                android:layout_alignRight="@id/tv_over_class"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:text="资源" />
+            <TextView
+                android:id="@+id/tv_student_number"
+                style="@style/style_common_tv"
+                android:layout_alignRight="@id/tv_over_class"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:text="学生(05/99)" />
+
+            <ImageView
+                android:id="@+id/iv_top_right"
+                android:layout_width="wrap_content"
+                android:background="@android:color/holo_purple"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1.33dp"
+        android:layout_below="@id/fl_01"
+        android:background="#FFC5D8E6" />
+
+    <FrameLayout
+        android:id="@+id/fl_02"
+        android:layout_below="@id/view_line"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:visibility="invisible"
+        android:background="@android:color/darker_gray"
+        android:layout_width="845dp"
+        android:layout_height="678dp">
+
+
+    </FrameLayout>
+
+</RelativeLayout>

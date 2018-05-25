@@ -71,6 +71,10 @@
                 android:id="@+id/btn10_about_image"
                 style="@style/style_common_btn"
                 android:text="@string/str10_about_image" />
+            <Button
+                android:id="@+id/btn11_ten_login"
+                style="@style/style_common_btn"
+                android:text="test ten login" />
         </LinearLayout>
 
     </ScrollView>

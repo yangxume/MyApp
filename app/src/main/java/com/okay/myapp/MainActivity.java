@@ -37,6 +37,8 @@ public class MainActivity extends BaseActivity {
     Button btn09AndroidService;
     @BindView(R.id.btn10_about_image)
     Button btn10AboutImage;
+    @BindView(R.id.btn11_ten_login)
+    Button btn11TenLogin;
 
 
     @Override
@@ -76,7 +78,8 @@ public class MainActivity extends BaseActivity {
             R.id.btn07_webview,
             R.id.btn08_viewdraghelper,
             R.id.btn09_android_service,
-            R.id.btn10_about_image
+            R.id.btn10_about_image,
+            R.id.btn11_ten_login
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -109,6 +112,13 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn10_about_image:
                 toOtherActivity(Activity10_AboutImage.class);
+                break;
+            case R.id.btn11_ten_login:
+
+                TeacherLiveClient mTeacherLiveClient = new TeacherLiveClient(getApplicationContext(), RoleManager.Role.TEACHER);
+                mTeacherLiveClient.tencentLogin("62951188658", "eJxlj1FvgjAUhd-5FaTPy2wLFdybGUYR3awKy-bSdLRshQkdFKNb-O86ZjKS3beT78s5ud*Wbdtgu9jc8jSt2tIwc9QS2Hc2gODmD2qtBOOGObX4B*VBq1oynhlZdxARQjCEfUcJWRqVqasxxCOCkO8Pid*TGlGwbum3xb1UeMRDo76i3jq4nDzfhzSgU9pE4eOTqNolT4t2loz16qCjol0FNH*Q63jq8Wjzlec0fB-Py3lsSvI5m*RO8LHH2eBVrndh-CKTOKXZdnDJC*4mbkV6k0bt5PUtjD0Mfd-t0b2sG1WVnYAhIgg78OeAdbLOk6heJw__");
+
+
                 break;
 
         }
