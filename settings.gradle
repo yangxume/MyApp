@@ -1,1 +1,1 @@
-include ':app', ':my_aidl_server', ':my_aidl_client', ':my_silent_install', ':my_rx_java', ':my_interview', ':multi_channel_pack', ':my_android_8.0', ':android_animation'
+include ':app', ':my_aidl_server', ':my_aidl_client', ':my_silent_install', ':my_rx_java', ':my_interview', ':multi_channel_pack', ':my_android_8.0', ':android_animation', ':01_DiskLruCache', ':01_LruCache_PhotoWall', ':02_LruCache'
