@@ -9,4 +9,5 @@ include ':app', ':04_Fresco',
         ':android_animation',
         ':01_DiskLruCache',
         ':02_LruCache',
-        ':03_Glide'
+        ':03_Glide',
+        ':04_OkHttp'
