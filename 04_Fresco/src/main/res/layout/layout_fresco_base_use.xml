@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@android:color/darker_gray"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/btn_fresco_base_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fresco_base_use"
+            android:textAllCaps="false" />
+
+        <!--
+
+           圆形图—roundAsCircle：设置roundAsCircle为true
+           圆角图—roundedCornerRadius
+                左上角是否为圆角fresco:roundTopLeft="false"
+                右上角是否为圆角fresco:roundTopRight="false
+                左下角是否为圆角fresco:roundBottomLeft="false"
+                右下角是否为圆角fresco:roundBottomRight="false"
+                圆形圆角边框宽度及颜色—roundingBorder：
+
+        -->
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_fresco_base_use"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="50dp"
+            app:actualImageScaleType="focusCrop"
+            app:backgroundImage="@android:color/holo_orange_light"
+            app:fadeDuration="5000"
+            app:failureImage="@mipmap/icon_failure"
+            app:failureImageScaleType="centerInside"
+            app:placeholderImage="@mipmap/icon_placeholder"
+            app:placeholderImageScaleType="fitCenter"
+            app:progressBarAutoRotateInterval="5000"
+            app:progressBarImage="@mipmap/icon_progress_bar"
+            app:progressBarImageScaleType="centerInside"
+            app:retryImage="@mipmap/icon_retry"
+            app:retryImageScaleType="centerCrop"
+            app:roundAsCircle="false"
+            app:roundTopLeft="false"
+            app:roundWithOverlayColor="@android:color/holo_blue_light"
+            app:roundedCornerRadius="30dp"
+            app:roundingBorderColor="@android:color/holo_purple"
+            app:roundingBorderWidth="10dp" />
+    </LinearLayout>
+
+
+</FrameLayout>

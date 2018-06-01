@@ -8,38 +8,10 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:background="@android:color/darker_gray"
-        android:orientation="horizontal"
-        android:padding="10dp">
+    <include layout="@layout/layout_fresco_base_use" />
 
-        <Button
-            android:id="@+id/btn_base_fresco"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="frescoBaseUse"
-            android:text="基本用法"
-            android:textAllCaps="false" />
+    <include layout="@layout/layout_fresco_round_circle"/>
 
-        <com.facebook.drawee.view.SimpleDraweeView
-            android:id="@+id/simpleDraweeView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="50dp"
-            app:placeholderImage="@mipmap/icon_placeholder"
-            app:placeholderImageScaleType="fitCenter"
-            app:actualImageScaleType="focusCrop"
-            app:progressBarImage="@mipmap/icon_progress_bar"
-            app:progressBarImageScaleType="centerInside"
-            app:progressBarAutoRotateInterval="5000"
-            app:failureImage="@mipmap/icon_failure"
-            app:failureImageScaleType="centerInside"
-            app:retryImage="@mipmap/icon_retry"
-            app:retryImageScaleType="centerCrop"/>
-    </LinearLayout>
-
+    <include layout="@layout/layout_fresco_rounded_corner"/>
 
 </LinearLayout>

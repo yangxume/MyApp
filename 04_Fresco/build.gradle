@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+def librarys = rootProject.ext.dependencies
+
+
 
 android {
     compileSdkVersion 27
@@ -33,4 +36,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation 'com.facebook.fresco:fresco:1.9.0'
+    librarys.each { k, v -> implementation v }
+    implementation 'com.android.support:support-annotations:27.0.2'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
 }
