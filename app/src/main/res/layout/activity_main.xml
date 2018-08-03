@@ -72,9 +72,10 @@
                 style="@style/style_common_btn"
                 android:text="@string/str10_about_image" />
             <Button
-                android:id="@+id/btn11_ten_login"
+                android:id="@+id/btn11_popup_window"
                 style="@style/style_common_btn"
-                android:text="test ten login" />
+                android:text="str11_popup_window" />
+
         </LinearLayout>
 
     </ScrollView>

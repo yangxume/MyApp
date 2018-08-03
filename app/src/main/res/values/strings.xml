@@ -29,6 +29,7 @@
     <string name="action_edit">Edit</string>
     <string name="str8_sys_webview">sys_webview</string>
     <string name="str10_about_image">10_about_image</string>
+    <string name="str11_popup_window">str11_popup_window</string>
 
 
 </resources>

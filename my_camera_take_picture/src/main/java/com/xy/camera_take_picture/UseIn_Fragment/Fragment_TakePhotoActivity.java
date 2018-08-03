@@ -1,13 +1,13 @@
 package com.xy.camera_take_picture.UseIn_Fragment;
 
-import android.support.v4.app.*;
+import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.design.widget.TabLayout;
-import android.os.Bundle;
 
-import com.example.xuhong.takephotoandroidn_master.R;
+import com.xy.camera_take_picture.R;
 
 import java.util.ArrayList;
 import java.util.List;

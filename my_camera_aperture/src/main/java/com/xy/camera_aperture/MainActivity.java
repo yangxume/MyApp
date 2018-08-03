@@ -15,7 +15,6 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView view1;//1个蒙板
     private Camera camera;
 
-    private Button takepicture_button;
+//    private Button takepicture_button;
     private SurfaceView surfaceview;
     private int screenWidth, screenHeight;
     private int myViewPaddingLeft = 500,
@@ -127,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
                 camera = Camera.open();
                 Camera.Parameters params = camera.getParameters();
                 camera.setPreviewDisplay(surfaceview.getHolder());
+//                camera.setDisplayOrientation();
                 // 开启预览
                 camera.startPreview();
             } catch (IOException e) {

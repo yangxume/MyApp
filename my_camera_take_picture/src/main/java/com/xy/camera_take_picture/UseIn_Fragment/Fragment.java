@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +12,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.xuhong.takephotoandroidn_master.R;
-import com.example.xuhong.takephotoandroidn_master.TakePictureManager;
-import com.example.xuhong.takephotoandroidn_master.UseIn_Activity.Activity_TakePhotoActivity;
 import com.squareup.picasso.Picasso;
+import com.xy.camera_take_picture.R;
+import com.xy.camera_take_picture.TakePictureManager;
 
 import java.io.File;
 import java.util.List;

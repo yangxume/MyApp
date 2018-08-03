@@ -46,7 +46,7 @@ public class TakePictureManager {
     private Fragment mFragment;
 
     //默认不开启裁剪
-    private boolean isTailor = true;
+    private boolean isTailor = false;
 
     //裁剪宽高的比例,默认是是 1 ：1
     private int aspectX = 1;

@@ -37,8 +37,8 @@ public class MainActivity extends BaseActivity {
     Button btn09AndroidService;
     @BindView(R.id.btn10_about_image)
     Button btn10AboutImage;
-    @BindView(R.id.btn11_ten_login)
-    Button btn11TenLogin;
+    @BindView(R.id.btn11_popup_window)
+    Button btn11PopupWindow;
 
 
     @Override
@@ -79,7 +79,7 @@ public class MainActivity extends BaseActivity {
             R.id.btn08_viewdraghelper,
             R.id.btn09_android_service,
             R.id.btn10_about_image,
-            R.id.btn11_ten_login
+            R.id.btn11_popup_window
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -113,10 +113,8 @@ public class MainActivity extends BaseActivity {
             case R.id.btn10_about_image:
                 toOtherActivity(Activity10_AboutImage.class);
                 break;
-            case R.id.btn11_ten_login:
-
-
-
+            case R.id.btn11_popup_window:
+                toOtherActivity(Activity11_PopupWindow.class);
                 break;
 
         }
@@ -151,4 +149,8 @@ public class MainActivity extends BaseActivity {
             return true;
         }
     };
+
+    @OnClick(R.id.btn11_popup_window)
+    public void onViewClicked() {
+    }
 }
