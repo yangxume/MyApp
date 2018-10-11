@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -48,6 +50,11 @@ public class MainActivity extends BaseActivity {
         ButterKnife.bind(this);
 
         initView();
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.optString(null);
+
+
     }
 
     private void initView() {
