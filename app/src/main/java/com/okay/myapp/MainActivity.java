@@ -41,6 +41,8 @@ public class MainActivity extends BaseActivity {
     Button btn10AboutImage;
     @BindView(R.id.btn11_popup_window)
     Button btn11PopupWindow;
+    @BindView(R.id.btn12_leakcanary)
+    Button btn12Leakcanary;
 
 
     @Override
@@ -86,7 +88,8 @@ public class MainActivity extends BaseActivity {
             R.id.btn08_viewdraghelper,
             R.id.btn09_android_service,
             R.id.btn10_about_image,
-            R.id.btn11_popup_window
+            R.id.btn11_popup_window,
+            R.id.btn12_leakcanary
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -122,6 +125,10 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn11_popup_window:
                 toOtherActivity(Activity11_PopupWindow.class);
+                break;
+
+            case R.id.btn12_leakcanary:
+                toOtherActivity(Activity12_LeakBlock.class);
                 break;
 
         }

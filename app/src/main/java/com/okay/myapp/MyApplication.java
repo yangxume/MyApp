@@ -3,6 +3,8 @@ package com.okay.myapp;
 import android.app.Application;
 import android.util.Log;
 
+import com.github.moduth.blockcanary.BlockCanary;
+import com.squareup.leakcanary.LeakCanary;
 import com.tencent.smtt.sdk.QbSdk;
 
 /**
@@ -43,5 +45,10 @@ public class MyApplication extends Application {
         };
         //x5内核初始化接口
         QbSdk.initX5Environment(getApplicationContext(),  cb);
+
+//        LeakCanary 初始化
+        LeakCanary.install(this);
+
+        BlockCanary.install(this,new AppBlockCanaryContext()).start();
     }
 }

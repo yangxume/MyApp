@@ -28,7 +28,7 @@
             <Button
                 android:id="@+id/btn01_share_data"
                 style="@style/style_common_btn"
-                android:text="@string/str_01_share" />
+                android:text="@string/str1_share_data" />
 
             <Button
                 android:id="@+id/btn02_send_binary_content"
@@ -74,7 +74,12 @@
             <Button
                 android:id="@+id/btn11_popup_window"
                 style="@style/style_common_btn"
-                android:text="str11_popup_window" />
+                android:text="@string/str11_popup_window" />
+
+            <Button
+                android:id="@+id/btn12_leakcanary"
+                style="@style/style_common_btn"
+                android:text="@string/str12_leak_block" />
 
         </LinearLayout>
 

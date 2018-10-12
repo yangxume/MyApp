@@ -2,8 +2,7 @@
     <string name="app_name">myapp_app_demo</string>
 
     <!--1.android 分享操作-->
-    <string name="str_01_share">1_android share data</string>
-
+    <string name="str1_share_data">1_android share data</string>
     <string name="str2_send_binary_content">2_send_binary_content</string>
     <string name="str3_scrollbar_style">3_scrollbarstyle</string>
     <string name="str4_fragment">4_fragment</string>
@@ -12,6 +11,9 @@
     <string name="str7_webview">7_webview</string>
     <string name="str8_viewdraghelper">8_ViewDragHelper</string>
     <string name="str9_android_service">9_android_service</string>
+    <string name="str10_about_image">10_about_image</string>
+    <string name="str11_popup_window">11_popup_window</string>
+    <string name="str12_leak_block">12_leak_block</string>
 
     <string name="share">分享</string>
     <string name="send_to">发送</string>
@@ -19,17 +21,10 @@
     <string name="share_binary">分享二进制内容</string>
     <string name="share_multiple_pieces_of_content">发送多块内容</string>
 
-    <string name="str_02_Multimedia">Multimedia</string>
-    <string name="audio_player">音频播放</string>
-
-
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="action_share">Share</string>
     <string name="action_edit">Edit</string>
-    <string name="str8_sys_webview">sys_webview</string>
-    <string name="str10_about_image">10_about_image</string>
-    <string name="str11_popup_window">str11_popup_window</string>
 
 
 </resources>
