@@ -43,7 +43,8 @@ public class ActivitySysWebView extends BaseActivity {
 //    private String owa_url = "http://owa.okjiaoyu.cn/op/embed.aspx?src=http://rw.okjiaoyu.cn/rw_W0nKLUmrf2.ppt";
 //      private String url_01 = "http://hotfix.oos.xk12.cn/p/PowerPointFrame.aspx?WOPISrc=http%3A%2F%2Fhotfix.wopi.xk12.cn%2Fwopi%2Ffiles%2Fhttp%3A%2F%2Frw.okjiaoyu.cn%2Frw_VYHS5tb14I.ppt&action=embedview&sc=032105722547&token=c31a7b9d3f124cb097e642626dabf600&system_id=61951185794&md5=rw_VYHS5tb14I.ppt&isokaypad=1";
 
-    String url = "http://hotfix.oos.xk12.cn/p/PowerPointFrame.aspx?WOPISrc=http%3A%2F%2Fhotfix.wopi.xk12.cn%2Fwopi%2Ffiles%2Fhttp%3A%2F%2Frw.okjiaoyu.cn%2Frw_E0W9bDBAKA.ppt&action=preloadview&sc=1136708169&token=29ee928027fb42ec8152e98b3acb59de&system_id=6160381&md5=rw_E0W9bDBAKA.ppt";
+    String url = "http://oos.okjiaoyu.cn/p/PowerPointFrame.aspx?WOPISrc=http%3A%2F%2Fwopi.okjiaoyu.cn%2Fwopi%2Ffiles%2Fhttp%3A%2F%2Frw.okjiaoyu.cn%2Frw_W0nKnxXHNu.ppt&action=embedview&sc=030295951894&system_id=61951185794&token=a6d973fba95d4befaf0219f27df1f24f&md5=rw_W0nKnxXHNu.ppt&isokaypad=1";
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
