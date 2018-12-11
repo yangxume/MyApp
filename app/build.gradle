@@ -24,6 +24,10 @@ android {
         versionName cfg.versionName//版本号
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
+
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
     }
     signingConfigs{
         releaseConfig {
@@ -83,6 +87,7 @@ dependencies {
     //    implementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
     debugImplementation 'com.github.markzhai:blockcanary-android:1.5.0'
     releaseImplementation 'com.github.markzhai:blockcanary-no-op:1.5.0'
+
 }
 
 /**
