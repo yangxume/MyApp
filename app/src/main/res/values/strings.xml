@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">myapp_app_demo</string>
+    <string name="app_name">MyApp</string>
 
     <!--1.android 分享操作-->
     <string name="str1_share_data">1_android share data</string>

@@ -11,6 +11,7 @@ import com.okay.myapp.mywebview.ActivityX5_Browser;
 import com.okay.myapp.mywebview.ActivityX5_FileChooser;
 import com.okay.myapp.mywebview.ActivityX5_FullScreen;
 import com.okay.myapp.mywebview.ActivityX5_OpenPPT;
+import com.okay.myapp.mywebview.WebViewVideoActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -48,6 +49,9 @@ public class Activity07_WebViewExample extends BaseActivity {
     @BindView(R.id.btn_js_call_android_method)
     Button btnJsCallAndroidMethod;
 
+    @BindView(R.id.btn_webview_video)
+    Button getWebviewVideo;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +68,8 @@ public class Activity07_WebViewExample extends BaseActivity {
             R.id.btn_browser,
             R.id.btn_ppt,
             R.id.btn_office,
-            R.id.btn_js_call_android_method
+            R.id.btn_js_call_android_method,
+            R.id.btn_webview_video
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -85,6 +90,9 @@ public class Activity07_WebViewExample extends BaseActivity {
                 break;
             case R.id.btn_js_call_android_method:
                 toOtherActivity(ActivitySysWebViewCallJs.class);
+                break;
+            case R.id.btn_webview_video:
+                toOtherActivity(WebViewVideoActivity.class);
                 break;
 
         }

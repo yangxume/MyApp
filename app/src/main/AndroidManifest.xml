@@ -64,6 +64,7 @@
         <activity android:name=".mywebview.ActivityX5_FullScreen"/>
         <activity android:name=".mywebview.ActivityX5_Browser"/>
         <activity android:name=".mywebview.ActivityX5_OpenPPT"/>
+        <activity android:name=".mywebview.WebViewVideoActivity"/>
 
 
 
