@@ -1,4 +1,4 @@
-package com.xy.android_android_runtimepermissions;
+package com.xy.android_runtimepermissions;
 
 import org.junit.Test;
 
