@@ -9,8 +9,10 @@ def keystorePropertiesFile = rootProject.file("keystore.properties")
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
+
     compileSdkVersion cfg.compileSdkVersion
     buildToolsVersion cfg.buildToolsVersion
+
     dexOptions {
         jumboMode = true
     }

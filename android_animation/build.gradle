@@ -1,13 +1,10 @@
 apply plugin: 'com.android.application'
 
-def cfg = rootProject.ext.android
 def librarys = rootProject.ext.dependencies
-def url = rootProject.ext.url
 
 android {
-    compileSdkVersion 26
 
-
+    compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
         applicationId "com.xy.animation"
@@ -15,9 +12,7 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
