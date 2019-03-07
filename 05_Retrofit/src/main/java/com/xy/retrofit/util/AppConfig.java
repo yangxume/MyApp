@@ -3,7 +3,7 @@ package com.xy.retrofit.util;
 /**
  * Copyright
  * <p>
- * Created by xuyang on 18/6/6 10:53
+ * Created by xuyang on 18/6/7 11:37
  * <p>
  * email xuyangme@126.com
  * <p>
@@ -13,13 +13,10 @@ package com.xy.retrofit.util;
  * <p>
  * Update records:
  */
-public class NetWorkUtils {
+public class AppConfig {
+
+    public static final String BASE_URL = "http://www.wanandroid.com/";
 
 
-    public static boolean isConnected(){
-
-
-        return true;
-    }
 
 }

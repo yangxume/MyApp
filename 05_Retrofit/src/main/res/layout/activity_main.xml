@@ -7,37 +7,37 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btnTestOkHttp"
+        android:id="@+id/btn1"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginStart="60dp"
-        android:text="TestOkHttp"
+        android:text="test1"
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnTestOkHttpInterceptor"
+        android:id="@+id/btn2"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:text="TestOkHttpInterceptor"
+        android:text="test2"
         android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@+id/btnTestOkHttp"
+        app:layout_constraintEnd_toEndOf="@+id/btn1"
         app:layout_constraintHorizontal_bias="0.212"
-        app:layout_constraintStart_toStartOf="@+id/btnTestOkHttp"
-        app:layout_constraintTop_toBottomOf="@+id/btnTestOkHttp" />
+        app:layout_constraintStart_toStartOf="@+id/btn1"
+        app:layout_constraintTop_toBottomOf="@+id/btn1" />
 
     <Button
-        android:id="@+id/btnTestRetrofit"
+        android:id="@+id/btn3"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:textAllCaps="false"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="20dp"
-        android:text="testRetrofit"
-        app:layout_constraintEnd_toEndOf="@+id/btnTestOkHttpInterceptor"
+        android:text="test3"
+        app:layout_constraintEnd_toEndOf="@+id/btn2"
         app:layout_constraintHorizontal_bias="0.363"
-        app:layout_constraintStart_toStartOf="@+id/btnTestOkHttpInterceptor"
-        app:layout_constraintTop_toBottomOf="@+id/btnTestOkHttpInterceptor" />
+        app:layout_constraintStart_toStartOf="@+id/btn2"
+        app:layout_constraintTop_toBottomOf="@+id/btn2" />
 </android.support.constraint.ConstraintLayout>
