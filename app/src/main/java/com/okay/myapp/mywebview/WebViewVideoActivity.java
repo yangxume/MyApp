@@ -2,10 +2,12 @@ package com.okay.myapp.mywebview;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.view.WindowManager;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -32,35 +34,41 @@ import com.okay.myapp.R;
 
 public class WebViewVideoActivity extends BaseActivity {
 
-    private WebView webView;
+    private WebView mWebView;
+    private String urlVideo = "https://rv.okjiaoyu.cn/rv_14q4X1oJOes.low.h264.mp4";
 
-    /**
-     * 视频全屏参数
-     */
+    /** 视频全屏参数 */
     protected static final FrameLayout.LayoutParams COVER_SCREEN_PARAMS = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
     private View customView;
     private FrameLayout fullscreenContainer;
     private WebChromeClient.CustomViewCallback customViewCallback;
-    private String url = "https://rv.okjiaoyu.cn/rv_14q4X1oJOes.low.h264.mp4";
 
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_webviewvideo);
-        webView = (WebView) findViewById(R.id.webview);
-        initWebView();
+
+        mWebView = (WebView) findViewById(R.id.webview);
+
+//        loadUrlNet();
+//        loadUrlAssets();
+//        loadUrlLocal();
+//        loadData();
+
+        loadVideoFullScreen();
+
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        webView.reload();
+        mWebView.reload();
     }
 
     /** 展示网页界面 **/
-    public void initWebView() {
-        WebChromeClient wvcc = new WebChromeClient();
-        WebSettings webSettings = webView.getSettings();
+    public void loadVideoFullScreen(){
+
+        WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webSettings.setUseWideViewPort(true); // 关键点
         webSettings.setAllowFileAccess(true); // 允许访问文件
@@ -68,20 +76,23 @@ public class WebViewVideoActivity extends BaseActivity {
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE); // 不加载缓存内容
 
-        webView.setWebChromeClient(wvcc);
-        WebViewClient wvc = new WebViewClient() {
+        mWebView.setWebViewClient(new WebViewClient(){
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                webView.loadUrl(url);
+                mWebView.loadUrl(url);
                 return true;
             }
-        };
-        webView.setWebViewClient(wvc);
+        });
+        mWebView.setWebChromeClient(getWebChromeClient());
+        // 加载Web地址
+        mWebView.loadUrl(urlVideo);
+    }
 
-        webView.setWebChromeClient(new WebChromeClient() {
+    @NonNull
+    private WebChromeClient getWebChromeClient() {
+        return new WebChromeClient() {
 
             /*** 视频播放相关的方法 **/
-
             @Override
             public View getVideoLoadingProgressView() {
                 FrameLayout frameLayout = new FrameLayout(WebViewVideoActivity.this);
@@ -98,15 +109,10 @@ public class WebViewVideoActivity extends BaseActivity {
             public void onHideCustomView() {
                 hideCustomView();
             }
-        });
-
-        // 加载Web地址
-        webView.loadUrl(url);
+        };
     }
 
-    /**
-     * 视频播放全屏
-     **/
+    /** 视频播放全屏 **/
     private void showCustomView(View view, WebChromeClient.CustomViewCallback callback) {
         // if a view already exists then immediately terminate the new one
         if (customView != null) {
@@ -125,26 +131,21 @@ public class WebViewVideoActivity extends BaseActivity {
         customViewCallback = callback;
     }
 
-    /**
-     * 隐藏视频全屏
-     */
+    /** 隐藏视频全屏 */
     private void hideCustomView() {
         if (customView == null) {
             return;
         }
-
         setStatusBarVisibility(true);
         FrameLayout decor = (FrameLayout) getWindow().getDecorView();
         decor.removeView(fullscreenContainer);
         fullscreenContainer = null;
         customView = null;
         customViewCallback.onCustomViewHidden();
-        webView.setVisibility(View.VISIBLE);
+        mWebView.setVisibility(View.VISIBLE);
     }
 
-    /**
-     * 全屏容器界面
-     */
+    /** 全屏容器界面 */
     static class FullscreenHolder extends FrameLayout {
 
         public FullscreenHolder(Context ctx) {
@@ -163,15 +164,40 @@ public class WebViewVideoActivity extends BaseActivity {
         getWindow().setFlags(flag, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
+    //方式1. 加载一个网页：
+    private void loadUrlNet() {
+        mWebView.loadUrl("https://rv.okjiaoyu.cn/rv_14q4X1oJOes.low.h264.mp4");
+    }
+
+    //方式2：加载apk包中的html页面
+    private void loadUrlAssets() {
+        mWebView.loadUrl("file:///android_asset/mp4.html");
+    }
+
+    //方式3：加载手机本地的html页面
+    private void loadUrlLocal() {
+//        mWebView.loadUrl("content://com.android.htmlfileprovider/sdcard/test.html");
+    }
+
+    // 方式4： 加载 HTML 页面的一小段内容
+    private void loadData() {
+
+//        mWebView.loadData(String data, String mimeType, String encoding)
+        // 参数说明：
+        // 参数1：需要截取展示的内容
+        // 内容里不能出现 ’#’, ‘%’, ‘\’ , ‘?’ 这四个字符，若出现了需用 %23, %25, %27, %3f 对应来替代，否则会出现异常
+        // 参数2：展示内容的类型
+        // 参数3：字节码
+
+    }
+
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
         switch (keyCode) {
             case KeyEvent.KEYCODE_BACK:
                 /** 回退键 事件处理 优先级:视频播放全屏-网页回退-关闭页面 */
-                if (customView != null) {
-                    hideCustomView();
-                } else if (webView.canGoBack()) {
-                    webView.goBack();
+                if (mWebView.canGoBack()) {
+                    mWebView.goBack();
                 } else {
                     finish();
                 }
@@ -181,5 +207,14 @@ public class WebViewVideoActivity extends BaseActivity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
 
+        if (null != mWebView){
+            ViewGroup parent = (ViewGroup) mWebView.getParent();
+            parent.removeView(mWebView);
+            mWebView.destroy();
+        }
+    }
 }
