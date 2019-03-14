@@ -2,29 +2,38 @@
 apply from: "config.gradle"
 
 buildscript {
+
     ext.kotlin_version = '1.2.71'
 
     repositories {
-        google()
-//        jcenter()
+
         maven {
             url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'
         }
+
+        google()
+        jcenter()
+
     }
     dependencies {
+
         classpath 'com.android.tools.build:gradle:3.2.1'
         classpath 'com.mcxiaoke.packer-ng:plugin:2.0.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
     }
 }
 
 allprojects {
     repositories {
-        google()
-//        jcenter()
+
         maven {
             url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'
         }
+
+        google()
+        jcenter()
+
         maven {
             url "http://10.60.0.100:8081/repository/okayclient_snapshot/"
         }
