@@ -1,4 +1,4 @@
-package com.myapp.leakcanary;
+package com.myapp.leakcanary.util;
 
 import android.content.Context;
 import android.text.TextUtils;

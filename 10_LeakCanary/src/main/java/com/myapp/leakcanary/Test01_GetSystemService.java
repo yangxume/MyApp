@@ -7,21 +7,18 @@ import android.os.PowerManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+public class Test01_GetSystemService extends AppCompatActivity {
 
-    private static final String TAG = MainActivity.class.getSimpleName();
-
+    private static final String TAG = Test01_GetSystemService.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.test01_getsystemservice);
         ButterKnife.bind(this);
 
 //        getSystemService内存泄漏测试

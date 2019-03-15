@@ -5,14 +5,14 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-public class Test01Activity extends AppCompatActivity {
+public class Test04_Thread extends AppCompatActivity {
 
-    private static final String TAG = "Test01Activity";
+    private static final String TAG = "Test04_Thread";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test01);
+        setContentView(R.layout.test04_thread);
     }
 
     @Override

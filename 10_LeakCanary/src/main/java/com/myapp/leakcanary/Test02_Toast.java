@@ -5,21 +5,23 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
+import com.myapp.leakcanary.util.ToastUtil;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Test02_Toast_Activity extends AppCompatActivity {
+public class Test02_Toast extends AppCompatActivity {
 
 
-    private static final String TAG = Test02_Toast_Activity.class.getSimpleName();
+    private static final String TAG = Test02_Toast.class.getSimpleName();
     @BindView(R.id.btn_test)
     Button btnTest;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test02_toast);
+        setContentView(R.layout.test02_toast);
         ButterKnife.bind(this);
     }
 
@@ -29,7 +31,7 @@ public class Test02_Toast_Activity extends AppCompatActivity {
 
         /**
          * ToastUtil.showShort(this,"Toast  测试 ");
-         * 
+         *
          * 此种写法当在Activity 中 调用时会造成activity的内存泄露
          *
          * 这是由于 static对象是内部的static对象是比较容易造成内存泄漏的，

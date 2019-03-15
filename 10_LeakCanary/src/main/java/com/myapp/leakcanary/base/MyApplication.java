@@ -1,4 +1,4 @@
-package com.myapp.leakcanary;
+package com.myapp.leakcanary.base;
 
 import android.app.Application;
 
