@@ -1,4 +1,4 @@
-include ':app', ':04_Fresco', ':my_constraint_layout', ':05_Retrofit', ':my_camera1_surfaceview', ':my_camera_aperture', ':my_camera_take_picture', ':my_color_recognition', ':my_work_time', ':06_Kotlin', ':my_app_test', ':07_Xlog', ':08_Jpush', ':09_okhttp_Interceptor', ':android_runtimepermissions', ':android_mvp', ':10_LeakCanary',
+include ':app', ':04_Fresco', ':my_constraint_layout', ':05_Retrofit', ':my_camera1_surfaceview', ':my_camera_aperture', ':my_camera_take_picture', ':my_color_recognition', ':my_work_time', ':06_Kotlin', ':my_app_test', ':07_Xlog', ':08_Jpush', ':09_okhttp_Interceptor', ':android_runtimepermissions', ':android_mvp', ':10_LeakCanary', ':12_BlockCanary', ':13_AutoTrace',
         ':my_aidl_server',
         ':my_aidl_client',
         ':my_silent_install',
