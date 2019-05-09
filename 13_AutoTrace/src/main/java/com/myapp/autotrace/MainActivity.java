@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
                     properties.put("userName", "aaa");
                     properties.put("version", 666);
                     SensorsDataAPI.sharedInstance().track("view_click", properties);
+
+
+                    AopUtil;
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

@@ -108,6 +108,23 @@ public class MyApplication extends Application {
             eventTypeList.add(SensorsDataAPI.AutoTrackEventType.APP_CLICK);
             SensorsDataAPI.sharedInstance().enableAutoTrack(eventTypeList);
 
+
+            try {
+                // 打开自动采集, 并指定追踪哪些 AutoTrack 事件
+                List<SensorsDataAPI.AutoTrackEventType> eventTypeList = new ArrayList<>();
+                // $AppStart
+                eventTypeList.add(SensorsDataAPI.AutoTrackEventType.APP_START);
+                // $AppEnd
+                eventTypeList.add(SensorsDataAPI.AutoTrackEventType.APP_END);
+                // $AppViewScreen
+                eventTypeList.add(SensorsDataAPI.AutoTrackEventType.APP_VIEW_SCREEN);
+                // $AppClick
+                eventTypeList.add(SensorsDataAPI.AutoTrackEventType.APP_CLICK);
+                SensorsDataAPI.sharedInstance().enableAutoTrack(eventTypeList);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
