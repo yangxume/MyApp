@@ -36,4 +36,4 @@ proguard/
 #build.gradle
 #gradle.properties
 #settings.gradle
-t_classroom.iml
+MyApp.iml
