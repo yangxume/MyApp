@@ -4,49 +4,60 @@
  * 注意需要在根目录的build.gradle中进行引入
  */
 ext {
+
     android = [
-            compileSdkVersion: 26,
-            buildToolsVersion: "28.0.3",
-            minSdkVersion    : 19,
-            targetSdkVersion : 25,
+            compileSdkVersion: 26,//修改compileSdkVersion并不会影响我们的我们生成的app在手机先的行为。最理想的情况就是把compileSdkVersion设置到最高。
+            buildToolsVersion: "28.0.3",//构建工具的版本号是多少，规则是可以用高的构建工具来构建低版本Sdk的工程。使用build-tools目录中的最大版本号即可
+            minSdkVersion    : 19,//这个就是程序运行的最低的要求的Sdk版本号，在低于这个版本号的手机设备上无法安装。
+            targetSdkVersion : 25,//targetSdkVersion的设置主要是当系统版本高于设置的target的时候。然后targetSdkVersion最好和compileSdkVersion一样。
             versionCode      : 1,
             versionName      : "1.0"
-
     ]
     url = [
             "debug"  : "debugUrl1",
             "release": "releaseUrl1",
     ]
-    //Version
-    supportLibrary = "27.0.2"
-    tinkerVerison = "1.9.1"
 
-    rxjava2 = "2.1.0"
-    rxandroid = "2.0.1"
-    retrofit2 = "2.3.0"
-    retrofit2_adapter_rxjava2 = "2.3.0"
-    retrofit2_converter_gson = "2.3.0"
-    okhttp3_logging_interceptor = "3.8.1"
+    /*=================================常用的引用============================================*/
+    supportLibraryVersion = "27.0.2"
 
+    //supportLibVersion 的头数字是和targetSdkVersion 版本一样的。
     dependencies = [
 
+            /*support库*/
+            "constraint_layout"  : "com.android.support.constraint:constraint-layout:1.1.2",
+            "appcompat_v7"       : "com.android.support:appcompat-v7:${supportLibraryVersion}",
+            "support_v4"         : "com.android.support:support-v4:${supportLibraryVersion}",
+            "recyclerView"       : "com.android.support:recyclerview-v7:${supportLibraryVersion}",
+            "design"             : "com.android.support:design:${supportLibraryVersion}",
+            "multidex"           : "com.android.support:multidex:1.0.1",
+            "cardview"           : "com.android.support:cardview-v7:${supportLibraryVersion}",
+            "support-annotations": "com.android.support:support-annotations:${supportLibraryVersion}",
+            "butterknife"        : 'com.jakewharton:butterknife:8.8.1',
+            "annotation"         : 'androidx.annotation:annotation:1.0.0',
+            "palette-v7": 'com.android.support:palette-v7:27.0.2',
+            "picasso": 'com.squareup.picasso:picasso:2.5.2',
+            "glide": 'com.github.bumptech.glide:glide:3.7.0',
+            "fresco": 'com.facebook.fresco:fresco:1.9.0',
+
+    ]
+
+    retrofitDep = [
             "rxjava2"                    : "io.reactivex.rxjava2:rxjava:2.1.0",
             "rxandroid"                  : "io.reactivex.rxjava2:rxandroid:2.0.1",
             "retrofit2"                  : 'com.squareup.retrofit2:retrofit:2.3.0',
             "retrofit2_adapter_rxjava2"  : 'com.squareup.retrofit2:adapter-rxjava2:2.3.0',
             "retrofit2_converter_gson"   : 'com.squareup.retrofit2:converter-gson:2.3.0',
             "okhttp3_logging_interceptor": 'com.squareup.okhttp3:logging-interceptor:3.8.1',
+    ]
 
-            /*support库*/
-            "multidex"                   : "com.android.support:multidex:1.0.1",
-            "cardview"                   : "com.android.support:cardview-v7:${supportLibrary}",
-            "constraint"                 : "com.android.support.constraint:constraint-layout:1.0.2",
-            "recyclerview"               : "com.android.support:recyclerview-v7:${supportLibrary}",
-            "supportV4"                  : "com.android.support:support-v4:${supportLibrary}",
-            "suppoutDesign"              : "com.android.support:design:${supportLibrary}",
-            "supportAppcompat"           : "com.android.support:appcompat-v7:${supportLibrary}",
-            "okhttp3"                    : "com.squareup.okhttp3:okhttp:3.9.0",
-            "butterknife"                : 'com.jakewharton:butterknife:8.8.1',
+    othersDep = [
+            //听云
+
+            "newlens"    : 'com.networkbench.newlens.agent.android:nbs.newlens.agent:2.8.1',
+            "blockcanary": 'com.github.markzhai:blockcanary-android:1.5.0',
+            "leakcanary" : 'com.squareup.leakcanary:leakcanary-android:1.5.4',
+            "jsoup"      : 'org.jsoup:jsoup:1.11.3'
 
     ]
 }
@@ -63,3 +74,4 @@ ext {
 //implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
 ////非必要依赖， log依赖，如果需要打印OkHttpLog需要添加
 //implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+

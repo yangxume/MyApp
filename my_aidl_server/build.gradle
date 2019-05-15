@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
+def librarys = rootProject.ext.dependencies
 
 android {
+
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
@@ -26,8 +28,7 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    librarys.each { k, v -> implementation v }
 
-    implementation 'com.android.support:appcompat-v7:26.0.0-beta1'
     testImplementation 'junit:junit:4.12'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 }

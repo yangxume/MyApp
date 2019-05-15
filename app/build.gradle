@@ -72,6 +72,7 @@ android {
     }
 
 }
+
 /**
  * 方法三：优化二
  */
@@ -82,13 +83,8 @@ dependencies {
     })
     testImplementation 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    implementation 'com.android.support:support-annotations:26.0.0-beta1'
     librarys.each { k, v -> implementation v }
-    implementation 'org.jsoup:jsoup:1.11.3'
-    implementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
-    //    implementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
-    debugImplementation 'com.github.markzhai:blockcanary-android:1.5.0'
-    releaseImplementation 'com.github.markzhai:blockcanary-no-op:1.5.0'
+
 
 }
 
