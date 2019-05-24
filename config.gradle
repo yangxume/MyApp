@@ -35,10 +35,16 @@ ext {
             "support-annotations": "com.android.support:support-annotations:${supportLibraryVersion}",
             "butterknife"        : 'com.jakewharton:butterknife:8.8.1',
             "annotation"         : 'androidx.annotation:annotation:1.0.0',
-            "palette-v7": 'com.android.support:palette-v7:27.0.2',
-            "picasso": 'com.squareup.picasso:picasso:2.5.2',
-            "glide": 'com.github.bumptech.glide:glide:3.7.0',
-            "fresco": 'com.facebook.fresco:fresco:1.9.0',
+            "palette-v7"         : 'com.android.support:palette-v7:27.0.2',
+            "picasso"            : 'com.squareup.picasso:picasso:2.5.2',
+            "glide"              : 'com.github.bumptech.glide:glide:3.7.0',
+            "fresco"             : 'com.facebook.fresco:fresco:1.9.0',
+
+            //图片压缩
+            "Luban"              : 'top.zibin:Luban:1.1.8',
+            "glide"              : 'com.github.bumptech.glide:glide:3.7.0',
+            "easypermissions"    : 'pub.devrel:easypermissions:0.3.0',
+            "PhotoView"          : 'com.commit451:PhotoView:1.2.4'
 
     ]
 
