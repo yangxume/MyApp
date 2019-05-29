@@ -1,4 +1,4 @@
-package com.xy.android_mvp.login.model;
+package com.xy.android_mvp.model;
 
 public interface LoginListener {
 
