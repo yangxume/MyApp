@@ -3,4 +3,43 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorRed">#FF3737</color>
+    <color name="white">#FFFFFF</color>
+    <color name="line">#cbcbcb</color>
+    <color name="background">#f7f7f7</color>
+    <color name="bgHome">#393939</color>
+    <color name="textcolorHome">#92969e</color>
+    <color name="textcolordef">#919191</color>
+    <color name="textcolorsel">#373737</color>
+    <color name="lifebgcolor">#ab9274</color>
+    <color name="lifetextcolor">#efeff0</color>
+    <color name="textcolorLife">#dc2d1d</color>
+    <color name="textcolormoney">#ff9610</color>
+    <color name="textcolorfault">#abe8f0</color>
+    <color name="textcolorblack">#ff000000</color>
+
+    <color name="leftColor">#a1de89</color>
+    <color name="rightColor">#f7e494</color>
+    <color name="rightBottomColor">#f7d194</color>
+    <color name="leftColorBottom">#208C59</color>
+    <color name="selectLeftColor">#1daf00</color>
+    <color name="selectRightColor">#f8935c</color>
+    <color name="xyColor">#999</color>
+
+    <color name="color_blue_8296ef">#8296ef</color>
+    <color name="color_purple_947cf1">#947cf1</color>
+    <color name="color_purple_d1b2fb">#d1b2fb</color>
+
+    <color name="black_text">#FF18191A</color>
+    <color name="menu_bottom_text">#f2f8ff</color>
+    <color name="practice_test_no_text">#2b89e9</color>
+    <color name="practice_test_content_text">#2f2f2f</color>
+    <color name="practice_test_result_text">#9a9a9a</color>
+    <color name="practice_test_result_detail_text">#ab8b28</color>
+    <color name="info_layout_bg">#eaeaea</color>
+    <color name="main_bg">#288df5</color>
+    <color name="blue_color_2b9bf7">#2b9bf7</color>
 </resources>
