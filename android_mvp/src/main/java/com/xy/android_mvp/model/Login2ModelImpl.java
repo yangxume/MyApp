@@ -26,7 +26,7 @@ public class Login2ModelImpl implements Login2Contract.Login2Model {
         if (userName.equals(userName) && passWord.equals(passWord)){
             loginListener.onSuccess();
         }else{
-            loginListener.onFailed();
+            loginListener.onFailed("登录错误");
         }
     }
 }
